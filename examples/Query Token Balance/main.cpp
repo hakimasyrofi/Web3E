@@ -52,9 +52,9 @@ void queryERC875Balance(const char* ContractAddress, const char *userAddress)
 	// transaction
 	Contract contract(web3, ContractAddress);
 
-	String myAddr = userAddress;
+	string myAddr = userAddress;
 
-	String func = "balanceOf(address)";
+	string func = "balanceOf(address)";
 	Serial.println("Start");
 	string param = contract.SetupContractData(func.c_str(), &myAddr);
 	string result = contract.ViewCall(&param);
